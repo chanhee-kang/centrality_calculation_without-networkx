@@ -1,13 +1,13 @@
 # Title / Centrality_Calculation
-* route.csv 내의 centrality를 계산하여 
+route.csv 내의 centrality를 계산하여 
 
 ## Installation
-* Python 3.x 환경에서 작성 하였습니다.
-* 각 패키지를 pip명령어를 통해 설치하여 주십시오.
+Python 3.x 환경에서 작성 하였습니다.
+각 패키지를 pip명령어를 통해 설치하여 주십시오.
 
 ## Explaination
-* Route.csv 파일은 공항에서 공항의 경로를 표시해준 csv파일입니다
-* AFK -> ARE 공항으로 이동시 각각의 betweenness, clossness, 및 degree centrality를 계산하여 줍니다.
+Route.csv 파일은 공항에서 공항의 경로를 표시해준 csv파일입니다
+AFK -> ARE 공항으로 이동시 각각의 betweenness, clossness, 및 degree centrality를 계산하여 줍니다.
 
 ## Usage
 * step1: main.py를 사용하여 betweenness, clossness, 및 degree centrality를 계산합니다.
