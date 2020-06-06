@@ -1,17 +1,19 @@
 ## Centrality_Calculation
-route.csv 내의 centrality를 계산하는 코드 입니다
+This code is for calculating centralities for route.csv with out python networkx library
 
 ### Explaination
 Route.csv 파일은 공항에서 공항의 경로를 표시해준 csv파일입니다
+
+### Example
 AFK -> ARE 공항으로 이동시 각각의 betweenness, clossness, 및 degree centrality를 계산하여 줍니다.
 
 ### Usage
-* step1: main.py를 사용하여 betweenness, clossness, 및 degree centrality를 계산합니다.
-* step2: network_centralization_based.py를 사용하여  network_centralization_based를 계산합니다.
+* 1: main.py is for calculating betweenness, clossness, degree centrality
+* 2: network_centralization_based.py is for calculating network_centralization_based
+* 3: To calculate network centralization based, Please run the code main.py so that network_centralization_based.py can use csv file that created by main.py
 
 ### Limitations
-multiprocessing을 추가하여도 속도면에서 느립니다
-matrix 형태로 problem solving 방면으로 다시 구축 
+The code may run slow
 
 ### Contact
-작동에 문제가 생기시거나 궁금한점이 있으시면 연락주시면 감사하겠습니다 [https://ck992.github.io/](https://ck992.github.io/).
+[https://ck992.github.io/](https://ck992.github.io/).
