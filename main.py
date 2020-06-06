@@ -16,16 +16,16 @@ class Graph():
         pool = Pool(cpu_count())  # multiprocessing pool
         paths = []
 
-        # multiprocessing으로 shortestpath 계산 후 paths에 결과 출력
+        # calculates shortestpath and show the result on "paths" by multiprocessing
         for result in tqdm(pool.imap_unordered(self.save_shortestPath, enumerate(list(self.node_list)[:-1])),
                         desc="GET SHORTEST PATH", total=len(self.node_list)-1):
             paths += result
 
         for path in paths:
             self.paths[path[0]][path[1]] = path[2]
-            self.paths[path[1]][path[0]] = path[2][::-1]  # 반대로 입력
+            self.paths[path[1]][path[0]] = path[2][::-1]
 
-        # multiprocessing 종료
+        # END multiprocessing
         pool.close()
         pool.join()
 
@@ -35,7 +35,7 @@ class Graph():
         res = []
         for end in list(self.node_list)[i+1:]:
             shortestPath = self.shortestPathBFS(start, end)
-            res.append((start,end,shortestPath))  # tuple로 저장
+            res.append((start,end,shortestPath))  # save tuple
         return res
 
     def get_neighbors(self, node_name):
@@ -47,7 +47,7 @@ class Graph():
     def shortestPathBFS(self, start, end):
         visited = set([start])
         prev = {}
-        queue = [start]  # bfs를 위한 queue
+        queue = [start]  # queue for bfs
         while len(queue)>0:
             node = queue.pop(0)  # queue에 있는 첫번째 node
             if node == end: #도착 노드를 찾았으면 탐색 종료
