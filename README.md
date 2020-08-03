@@ -1,9 +1,6 @@
 ## Centrality_Calculation
 This code is for calculating centralities for route.csv with out python networkx library
 
-### Explaination
-Route.csv 파일은 공항에서 공항의 경로를 표시해준 csv파일입니다
-
 ### Example
 AFK -> ARE 공항으로 이동시 각각의 betweenness, clossness, 및 degree centrality를 계산하여 줍니다.
 
